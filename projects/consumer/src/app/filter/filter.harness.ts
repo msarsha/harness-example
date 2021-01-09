@@ -1,6 +1,6 @@
 import {ComponentHarness} from '@angular/cdk/testing';
 
-export class AppFilterHarness extends ComponentHarness {
+export class FilterHarness extends ComponentHarness {
   static hostSelector = 'app-filter';
 
   protected getButton = this.locatorFor('.filter-button');

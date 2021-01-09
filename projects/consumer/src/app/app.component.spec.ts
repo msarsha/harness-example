@@ -1,13 +1,13 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
-import {AppFilterHarness} from './filter/filter.harness';
+import {FilterHarness} from './filter/filter.harness';
 import {AppHarness} from './app.harness';
 import {FilterComponent} from './filter/filter.component';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
-  let filterHarness: AppFilterHarness;
+  let filterHarness: FilterHarness;
   let appHarness: AppHarness;
 
   beforeEach(async () => {
@@ -22,7 +22,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
 
     appHarness = await TestbedHarnessEnvironment.harnessForFixture(fixture, AppHarness);
-    filterHarness = await TestbedHarnessEnvironment.harnessForFixture(fixture, AppFilterHarness);
+    filterHarness = await TestbedHarnessEnvironment.harnessForFixture(fixture, FilterHarness);
   });
 
   it('loads harness', () => {
